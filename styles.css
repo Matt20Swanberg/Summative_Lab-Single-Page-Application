@@ -54,7 +54,14 @@ label[for="search-input"] {
     cursor: pointer;
 }
 
+.hidden {
+    display: none;
+}
+
 #search-results {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 5%;
     text-align: center;
     padding: 16px;
     margin-bottom: 8px;
@@ -63,7 +70,6 @@ label[for="search-input"] {
     color: blue;
     background-color: #e8e5e5d4;
     font-weight: bold;
-    font-size: 1rem;
 }
 
 #word-result {
@@ -71,11 +77,16 @@ label[for="search-input"] {
 }
 
 #definition-result {
+    text-align: left;
+    color: #171717d3;
+}
+
+#synonym-result {
+    text-align: left;
     color: #171717d3;
 }
 
 #word-audio {
-    display: block;
     margin: 10px auto;
 }
 
@@ -85,4 +96,8 @@ label[for="search-input"] {
 
 #search-button:hover {
     transform: scale(1.15);
+}
+
+#error-message {
+    color: red;
 }

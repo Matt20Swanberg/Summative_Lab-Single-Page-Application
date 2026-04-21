@@ -15,17 +15,21 @@
     <main>
         <form id="search-form">
             <label for="search-input">Enter a word:</label>
-            <input type="text" name="search" id="search-input"
-                placeholder="Search for a word" required>
+            <input type="text" name="search" id="search-input" placeholder="Search for a word" required>
             <button type="submit" id="search-button">Search</button>
         </form>
-        <section id="search-results" aria-live="polite">
-            <h2>Results</h2>
-            <h3 id="word-result"></h3>
-            <p id="definition-result"></p>
-            <audio id="word-audio" aria-label="word audio" controls>
-                Your browser does not support the audio element.
-            </audio>
+        <section id="search-results" aria-live="polite" class="hidden">
+            <div id="results-content">
+                <h1>Results</h1>
+                <h3 id="word-result"></h3>
+                <h3>Definition(s)</h3>
+                <ol id="definition-result"></ol>
+                <h3>Synonyms</h3>
+                <ul id="synonym-result"></ul>
+                <audio id="word-audio" aria-label="word audio" class="hidden" controls></audio>
+                </audio>
+            </div>
+            <p id="error-message"></p>
         </section>
     </main>
     <script src="index.js"></script>
