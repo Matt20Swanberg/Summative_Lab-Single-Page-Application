@@ -124,4 +124,4 @@ Try searching:
 
 ## Author
 Matthew Swanberg
- - Created as part of a web development lab project for course 3 Module 8.
+ - Created as part of a web development lab project for Course 3 Module 8.
