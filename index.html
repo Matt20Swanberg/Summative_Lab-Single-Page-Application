@@ -2,36 +2,79 @@
 <html lang="en">
 
 <head>
+
+    <!-- =========================
+         Metadata / Page Setup
+         ========================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course 3 Mod 8 Lab</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+    <!-- =========================
+         Header
+         ========================= -->
     <header>
         <h1>Single Page Application - Wordly</h1>
     </header>
+
+    <!-- =========================
+         Main Content
+         ========================= -->
     <main>
+
+        <!-- =========================
+             Search Form
+             ========================= -->
         <form id="search-form">
             <label for="search-input">Enter a word:</label>
             <input type="text" name="search" id="search-input" placeholder="Search for a word" required>
             <button type="submit" id="search-button">Search</button>
         </form>
+
+        <!-- =========================
+             Results Section
+             ========================= -->
         <section id="search-results" aria-live="polite" class="hidden">
+
+            <!-- =========================
+                 Results Content (Success State)
+                 ========================= -->
             <div id="results-content">
-                <h1>Results</h1>
-                <h3 id="word-result"></h3>
+                <h2>Showing results for:</h2>
+                <h1 id="word-result"></h1>
                 <h3>Definition(s)</h3>
                 <ol id="definition-result"></ol>
-                <h3>Synonyms</h3>
-                <ul id="synonym-result"></ul>
-                <audio id="word-audio" aria-label="word audio" class="hidden" controls></audio>
-                </audio>
+                <div class="word-lists">
+                    <div class="word-list-column">
+                        <h3>Synonym(s)</h3>
+                        <ul id="synonym-result"></ul>
+                    </div>
+                    <div class="word-list-column">
+                        <h3>Antonym(s)</h3>
+                        <ul id="antonym-result"></ul>
+                    </div>
+                </div>
+                <audio id="word-audio" aria-label="word audio" class="hidden" controls>
             </div>
+
+            <!-- =========================
+                 Error Message (Error State)
+                 ========================= -->
             <p id="error-message"></p>
+
         </section>
+
     </main>
+
+    <!-- =========================
+         Scripts
+         ========================= -->
     <script src="index.js"></script>
 </body>
 
