@@ -1,4 +1,6 @@
-/* General Styles */
+/* =========================
+   General Page Styles
+   ========================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,6 +19,9 @@ main {
     color: #171717d3;
 }
 
+/* =========================
+   Form Styles
+   ========================= */
 #search-form {
     display: flex;
     flex-wrap: wrap;
@@ -31,30 +36,36 @@ main {
     text-align: center;
 }
 
-#search-input {
-    padding: 8px;
-    flex: 1;
-    min-width: 300px;
-    border: 2px solid #625e5ea7;
-    border-radius: 4px;
-}
-
 label[for="search-input"] {
     font-weight: bold;
     font-size: 1.5rem;
 }
 
+#search-input {
+    flex: 1;
+    min-width: 300px;
+    padding: 8px;
+    border: 2px solid #625e5ea7;
+    border-radius: 4px;
+}
+
 #search-button {
     padding: 8px 16px;
     background-color: rgb(67, 248, 122);
-    transition: transform 0.2s ease;
     color: white;
     font-weight: bold;
     border: none;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
+/* =========================
+   Results Section Styles
+   ========================= */
 #search-results {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 5%;
     text-align: center;
     padding: 16px;
     margin-bottom: 8px;
@@ -63,26 +74,79 @@ label[for="search-input"] {
     color: blue;
     background-color: #e8e5e5d4;
     font-weight: bold;
-    font-size: 1rem;
 }
 
 #word-result {
     color: #171717d3;
+    text-decoration: underline;
 }
 
 #definition-result {
+    text-align: left;
     color: #171717d3;
 }
 
 #word-audio {
-    display: block;
     margin: 10px auto;
 }
 
+/* =========================
+   Synonym / Antonym Columns
+   ========================= */
+.word-lists {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.word-list-column {
+    flex: 1;
+    text-align: left;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+    background-color: #ffffff;
+}
+
+.word-list-column h3 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#synonym-result,
+#antonym-result {
+    margin-top: 0;
+    padding-left: 20px;
+    color: #171717d3;
+}
+
+/* =========================
+   Utility Classes
+   ========================= */
+.hidden {
+    display: none;
+}
+
+.na-item {
+    font-style: italic;
+    color: #777;
+}
+
+/* =========================
+   Interactive States
+   ========================= */
 #search-input:focus {
     border-color: #171717d3;
 }
 
 #search-button:hover {
     transform: scale(1.15);
+}
+
+
+/* =========================
+   Error Message
+   ========================= */
+#error-message {
+    color: red;
 }
