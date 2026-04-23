@@ -77,7 +77,7 @@ function searchForWord() {
  */
 function fetchWordSearchResults(word) {
     fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
-        .then(function (response) {
+        .then((response) => {
             if (!response.ok) {
                 if (response.status === 404) {
                     throw new Error("Word not found or recognized");
@@ -86,12 +86,8 @@ function fetchWordSearchResults(word) {
             }
             return response.json();
         })
-        .then(data => {
-            displayWord(data);
-        })
-        .catch(function (error) {
-            handleErrors(error.message);
-        })
+        .then(displayWord)
+        .catch(error => handleErrors(error.message));
 }
 
 /* =========================
